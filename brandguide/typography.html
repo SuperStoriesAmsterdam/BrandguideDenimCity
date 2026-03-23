@@ -54,11 +54,11 @@
 
     :root {
       --bg: #FFE0DB;
-      --primary: #1200CC;
+      --primary: #0000A5;
       --accent: #FF2B2B;
       --surface: #F5D0CB;
       --white: #FFFFFF;
-      --muted: #1200CC80;
+      --muted: #0000A580;
       --font-display: 'Topol', sans-serif;
       --font-body: 'Apercu Pro', sans-serif;
       --font-mono: 'Apercu Mono', monospace;
@@ -279,7 +279,11 @@
       letter-spacing: -0.02em;
       text-transform: uppercase;
     }
-    .wordmark .ams { color: var(--accent); }
+    .wordmark .ams {
+      font-family: var(--font-mono);
+      font-weight: 400;
+      color: var(--accent);
+    }
 
     /* ── 2. Tagline tension ── */
     .tension {
@@ -333,16 +337,7 @@
       text-transform: uppercase;
     }
 
-    /* ── 5. Lead paragraph ── */
-    .lead-text {
-      font-family: var(--font-body);
-      font-size: 20px;
-      line-height: 1.5;
-      max-width: 600px;
-    }
-    .lead-text .accent { color: var(--accent); }
-
-    /* ── 6. Body ── */
+    /* ── 5. Body ── */
     .body-text {
       font-family: var(--font-body);
       font-size: 16px;
@@ -352,7 +347,7 @@
     .body-text p + p { margin-top: 1em; }
     .body-text .accent { color: var(--accent); }
 
-    /* ── 7. Metadata ── */
+    /* ── 6. Metadata ── */
     .metadata-specimen {
       display: flex;
       flex-direction: column;
@@ -370,7 +365,7 @@
       letter-spacing: 0.1em;
     }
 
-    /* ── 8. Nav + Arrow links ── */
+    /* ── 7. Nav + Arrow links ── */
     .nav-specimen {
       display: flex;
       flex-direction: column;
@@ -400,7 +395,7 @@
       letter-spacing: 0.06em;
     }
 
-    /* ── 8b. Pull quote ── */
+    /* ── 8a. Pull quote ── */
     .pull-quote {
       font-family: var(--font-body);
       font-weight: 700;
@@ -411,7 +406,7 @@
       max-width: 900px;
     }
 
-    /* ── 8b1.5. White display type ── */
+    /* ── 8a+. White display type ── */
     .white-type-demo {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -455,7 +450,7 @@
       margin-top: 16px;
     }
 
-    /* ── 8b2. Testimonials ── */
+    /* ── 8b. Testimonials ── */
     .testimonial { max-width: 600px; }
     .testimonial__quote {
       font-family: var(--font-body);
@@ -567,12 +562,6 @@
       letter-spacing: -0.01em;
       text-transform: uppercase;
     }
-    .rhythm-demo .r-lead {
-      font-family: var(--font-body);
-      font-size: 20px;
-      line-height: 1.5;
-    }
-    .rhythm-demo .r-lead .accent { color: var(--accent); }
     .rhythm-demo .r-body {
       font-family: var(--font-body);
       font-size: 16px;
@@ -729,13 +718,6 @@
       text-transform: uppercase;
       margin-bottom: 24px;
     }
-    .full-mock .mock-lead {
-      font-family: var(--font-body);
-      font-size: 20px;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
-    .full-mock .mock-lead .accent { color: var(--accent); }
     .full-mock .mock-body {
       font-family: var(--font-body);
       font-size: 16px;
@@ -763,6 +745,9 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 0;
     }
+    .palette--blues {
+      grid-template-columns: repeat(6, 1fr);
+    }
     .swatch {
       aspect-ratio: 1;
       display: flex;
@@ -774,18 +759,29 @@
     .swatch--surface { background: var(--surface); }
     .swatch--primary { background: var(--primary); color: var(--bg); }
     .swatch--accent { background: var(--accent); color: var(--bg); }
+    .swatch--denim-black { background: #000000; color: var(--bg); }
+    .swatch--denim-dark { background: #101A38; color: var(--bg); }
+    .swatch--denim-electric { background: #0000A5; color: var(--bg); }
+    .swatch--denim-digital { background: #0055FF; color: var(--bg); }
+    .swatch--denim-light { background: #3E8BF7; color: var(--bg); }
+    .swatch--denim-white { background: #FFFFFF; color: var(--primary); }
     .swatch__name {
       font-family: var(--font-body);
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
     }
     .swatch__hex {
       font-family: var(--font-mono);
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 0.05em;
     }
     .swatch--primary .swatch__hex,
-    .swatch--accent .swatch__hex { color: #FFE0DB99; }
+    .swatch--accent .swatch__hex,
+    .swatch--denim-black .swatch__hex,
+    .swatch--denim-dark .swatch__hex,
+    .swatch--denim-electric .swatch__hex,
+    .swatch--denim-digital .swatch__hex,
+    .swatch--denim-light .swatch__hex { color: #FFFFFF80; }
     .palette-ratios {
       display: grid;
       grid-template-columns: 55fr 25fr 15fr 5fr;
@@ -942,40 +938,6 @@
       margin-top: 8px;
     }
 
-    /* ── Clip text specimen ── */
-    .clip-text-specimen {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-    .clip-text-panel {
-      padding: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 320px;
-    }
-    .clip-text-panel--pink { background: var(--bg); }
-    .clip-text-panel--surface { background: var(--surface); }
-    .clip-text__display {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: clamp(64px, 8vw, 120px);
-      line-height: 0.85;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      text-align: center;
-      background-image: url('../LEX11796-2.jpg');
-      background-size: cover;
-      background-position: center;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .clip-text__display--alt {
-      background-image: url('../herojpg.jpg');
-    }
-
     /* ── Do's and Don'ts ── */
     .donts-grid {
       display: grid;
@@ -1039,7 +1001,6 @@
       .comp-grid { grid-template-columns: 1fr; }
       .white-type-demo { grid-template-columns: 1fr; }
       .testimonials-row { grid-template-columns: 1fr; }
-      .clip-text-specimen { grid-template-columns: 1fr; }
       .donts-grid { grid-template-columns: 1fr; }
       .donts-col:first-child { border-right: 1px solid var(--primary); border-bottom: none; }
       .frame-compare { grid-template-columns: 1fr; }
@@ -1127,8 +1088,11 @@
         <span>line-height: <span class="val">0.9</span></span>
         <span>letter-spacing: <span class="val">-0.02em</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
-        <span>color: <span class="val">#1200CC</span></span>
+        <span>color: <span class="val">#0000A5</span></span>
+        <span>"AMS" font: <span class="val">Apercu Mono 400 — thinner, same scale</span></span>
         <span>"AMS" color: <span class="val">#FF2B2B</span></span>
+        <span>Principle: <span class="val">name (Topol) vs. context (Mono) — typeface distinguishes, not scale</span></span>
+        <span>Origin: <span class="val">2018 Denim City Style Guide v.02 — Logo as System</span></span>
       </div>
     </section>
 
@@ -1148,7 +1112,7 @@
         <span>line-height: <span class="val">1</span></span>
         <span>letter-spacing: <span class="val">-0.02em</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
-        <span>Line 1 color: <span class="val">#1200CC</span></span>
+        <span>Line 1 color: <span class="val">#0000A5</span></span>
         <span>Line 2 color: <span class="val">#FF2B2B</span></span>
         <span>Gap: <span class="val">8px</span></span>
       </div>
@@ -1167,7 +1131,7 @@
         <span>line-height: <span class="val">1.1</span></span>
         <span>letter-spacing: <span class="val">-0.01em</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
-        <span>color: <span class="val">#1200CC</span></span>
+        <span>color: <span class="val">#0000A5</span></span>
       </div>
     </section>
 
@@ -1185,7 +1149,7 @@
         <span>Label size: <span class="val">12px</span></span>
         <span>Label tracking: <span class="val">0.1em</span></span>
         <span>Label transform: <span class="val">uppercase</span></span>
-        <span>Label color: <span class="val">#1200CC @ 50%</span></span>
+        <span>Label color: <span class="val">#0000A5 @ 50%</span></span>
         <span>Label &rarr; title gap: <span class="val">12px</span></span>
         <span>Title font: <span class="val">Topol 700</span></span>
         <span>Title size: <span class="val">56px</span></span>
@@ -1194,9 +1158,9 @@
       </div>
     </section>
 
-    <!-- 6. BODY TEXT -->
+    <!-- 5. BODY TEXT -->
     <section>
-      <div class="spec-label">6 &mdash; Body text</div>
+      <div class="spec-label">5 &mdash; Body text</div>
       <div class="specimen">
         <div class="body-text">
           <p>Connecting the next generation with the forefront of the denim world. We strive to create a place where knowledge, craftsmanship, and innovation in denim come together.</p>
@@ -1211,14 +1175,14 @@
         <span>letter-spacing: <span class="val">normal</span></span>
         <span>max-width: <span class="val">560px</span></span>
         <span>paragraph gap: <span class="val">1em (16px)</span></span>
-        <span>color: <span class="val">#1200CC</span></span>
+        <span>color: <span class="val">#0000A5</span></span>
         <span>accent phrases: <span class="val">#FF2B2B, same font</span></span>
       </div>
     </section>
 
-    <!-- 7. METADATA -->
+    <!-- 6. METADATA -->
     <section>
-      <div class="spec-label">7 &mdash; Metadata</div>
+      <div class="spec-label">6 &mdash; Metadata</div>
       <div class="specimen">
         <div class="metadata-specimen">
           <div class="metadata-row">
@@ -1243,15 +1207,15 @@
         <span>font-size: <span class="val">12px</span></span>
         <span>letter-spacing: <span class="val">0.1em</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
-        <span>color: <span class="val">#1200CC</span></span>
+        <span>color: <span class="val">#0000A5</span></span>
         <span>Role: <span class="val">dates, times, prices, durations, specs &mdash; factual only</span></span>
         <span>Never use for: <span class="val">body copy, titles, or navigation</span></span>
       </div>
     </section>
 
-    <!-- 8. NAV + ARROW LINKS -->
+    <!-- 7. NAV + ARROW LINKS -->
     <section>
-      <div class="spec-label">8 &mdash; Navigation + arrow links</div>
+      <div class="spec-label">7 &mdash; Navigation + arrow links</div>
       <div class="specimen">
         <div class="nav-specimen">
           <div class="nav-row">
@@ -1278,16 +1242,16 @@
         <span>font-size: <span class="val">14px</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
         <span>letter-spacing: <span class="val">0.06em</span></span>
-        <span>color default: <span class="val">#1200CC</span></span>
+        <span>color default: <span class="val">#0000A5</span></span>
         <span>color hover/active: <span class="val">#FF2B2B</span></span>
         <span>Active prefix: <span class="val">&rarr; in accent</span></span>
         <span>No filled buttons: <span class="val">arrow links only</span></span>
       </div>
     </section>
 
-    <!-- 8b. PULL QUOTE -->
+    <!-- 8a. PULL QUOTE -->
     <section>
-      <div class="spec-label">8b &mdash; Pull quote</div>
+      <div class="spec-label">8a &mdash; Pull quote</div>
       <div class="specimen">
         <blockquote class="pull-quote"><span style="font-weight: 400;">&ldquo;After this tour,</span> denim will never be the same <span style="font-weight: 400;">again.&rdquo;</span></blockquote>
       </div>
@@ -1299,49 +1263,76 @@
         <span>letter-spacing: <span class="val">-0.02em</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
         <span>alignment: <span class="val">left (never centered &mdash; centered reads as decoration)</span></span>
-        <span>color: <span class="val">#1200CC</span></span>
+        <span>color: <span class="val">#0000A5</span></span>
         <span>max-width: <span class="val">800px</span></span>
         <span>Role: <span class="val">carries someone&rsquo;s voice, not structure &mdash; same font, different intent</span></span>
       </div>
     </section>
 
-    <!-- 8b1.5. WHITE DISPLAY TYPE -->
+    <!-- 8a+. DISPLAY TYPE COLORS -->
     <section>
-      <div class="spec-label">8b+ &mdash; White display type</div>
+      <div class="spec-label">8a+ &mdash; Display type &mdash; three voices</div>
       <div class="specimen">
-        <div class="white-type-demo">
+        <div class="white-type-demo" style="grid-template-columns: repeat(3, 1fr);">
+          <!-- 072C — the voice -->
+          <div class="white-type-panel white-type-panel--pink">
+            <div class="white-type-panel__display" style="color: var(--primary);">The Store.</div>
+            <div class="white-type-panel__mono" style="color: var(--primary); opacity: 0.5;">072C &mdash; the voice</div>
+          </div>
+          <!-- White — the light -->
           <div class="white-type-panel white-type-panel--pink">
             <div class="white-type-panel__display">Brighter Blue</div>
-            <div class="white-type-panel__mono">Denim City AMS</div>
+            <div class="white-type-panel__mono">White &mdash; the light</div>
           </div>
+          <!-- Black — the weight -->
+          <div class="white-type-panel white-type-panel--pink">
+            <div class="white-type-panel__display" style="color: #000000;">Denim City</div>
+            <div class="white-type-panel__mono" style="color: #000000; opacity: 0.5;">Black &mdash; the weight</div>
+          </div>
+          <!-- White on surface -->
+          <div class="white-type-panel white-type-panel--surface">
+            <div class="white-type-panel__display">Make Your Own Jeans.</div>
+          </div>
+          <!-- Black on surface -->
+          <div class="white-type-panel white-type-panel--surface">
+            <div class="white-type-panel__display" style="color: #000000;">Make Your Own Jeans.</div>
+          </div>
+          <!-- White on indigo -->
+          <div class="white-type-panel" style="background: #101A38;">
+            <div class="white-type-panel__display">Denim City</div>
+            <div class="white-type-panel__mono" style="opacity: 0.4;">De Hallen, Amsterdam</div>
+          </div>
+          <!-- Bold+Regular quote in white -->
           <div class="white-type-panel white-type-panel--pink">
             <div class="white-type-panel__body"><span>&ldquo;After this tour,</span> denim will never be the same <span>again.&rdquo;</span></div>
           </div>
-          <div class="white-type-panel white-type-panel--surface">
-            <div class="white-type-panel__display">The Store.</div>
-            <div class="white-type-panel__mono">Strictly offline</div>
+          <!-- Bold+Regular quote in black -->
+          <div class="white-type-panel white-type-panel--pink">
+            <div class="white-type-panel__body" style="color: #000000;"><span>&ldquo;After this tour,</span> denim will never be the same <span>again.&rdquo;</span></div>
           </div>
-          <div class="white-type-panel white-type-panel--surface">
-            <div class="white-type-panel__display">Make Your Own Jeans.</div>
+          <!-- White on black -->
+          <div class="white-type-panel" style="background: #000000;">
+            <div class="white-type-panel__display">Denim City</div>
+            <div class="white-type-panel__mono" style="opacity: 0.4;">Print &middot; stamps &middot; favicon</div>
           </div>
         </div>
       </div>
       <div class="css-values">
-        <span>Color: <span class="val">#FFFFFF &mdash; white as letterkleur, niet als achtergrond</span></span>
-        <span>Topol on pink: <span class="val">display titles, wordmark moments</span></span>
-        <span>Apercu Pro Bold on pink: <span class="val">pull quotes, bold+regular mixed</span></span>
-        <span>Backgrounds: <span class="val">#FFE0DB (bg) or #F5D0CB (surface)</span></span>
-        <span>Scale: <span class="val">display only &mdash; clamp(48px, 6vw, 80px) minimum</span></span>
-        <span>Never: <span class="val">white type at body size (16px) &mdash; that&rsquo;s unreadable on pink</span></span>
-        <span>Never: <span class="val">white type on white background</span></span>
-        <span>Role: <span class="val">the fresh element &mdash; light where blue is heavy and red is sharp</span></span>
-        <span>When: <span class="val">hero moments, social posts, section dividers, editorial gestures</span></span>
+        <span>072C (#0000A5): <span class="val">the daily voice &mdash; all text, all UI, the default</span></span>
+        <span>Denim White (#FFF): <span class="val">the light &mdash; fresh, open, editorial</span></span>
+        <span>Denim Black (#000): <span class="val">the weight &mdash; architectural, heavy, formal</span></span>
+        <span>Scale: <span class="val">display only &mdash; 48px minimum for white and black</span></span>
+        <span>On pink: <span class="val">all three &mdash; 072C default, white for light, black for weight</span></span>
+        <span>On surface: <span class="val">white and black</span></span>
+        <span>On indigo: <span class="val">white display + 072C tone-on-tone</span></span>
+        <span>On black: <span class="val">white only</span></span>
+        <span>Never: <span class="val">white or black type at body size (16px)</span></span>
       </div>
     </section>
 
-    <!-- 8b2. TESTIMONIALS -->
+    <!-- 8b. TESTIMONIALS -->
     <section>
-      <div class="spec-label">8b2 &mdash; Testimonials</div>
+      <div class="spec-label">8b &mdash; Testimonials</div>
       <div class="specimen">
         <div class="testimonials-row">
           <div class="testimonial">
@@ -1358,11 +1349,11 @@
         <span>Quote font: <span class="val">Apercu Pro Italic 400</span></span>
         <span>Quote size: <span class="val">20px</span></span>
         <span>Quote line-height: <span class="val">1.5</span></span>
-        <span>Quote color: <span class="val">#1200CC</span></span>
+        <span>Quote color: <span class="val">#0000A5</span></span>
         <span>Attribution font: <span class="val">Apercu Mono 400</span></span>
         <span>Attribution size: <span class="val">12px</span></span>
         <span>Attribution tracking: <span class="val">0.1em</span></span>
-        <span>Attribution color: <span class="val">#1200CC @ 50%</span></span>
+        <span>Attribution color: <span class="val">#0000A5 @ 50%</span></span>
         <span>Quote &rarr; attribution gap: <span class="val">16px</span></span>
         <span>Role: <span class="val">personal voice &mdash; italic signals &ldquo;someone else is speaking&rdquo;</span></span>
         <span>vs. Pull quote: <span class="val">Bold = the brand&rsquo;s voice amplified. Italic = a visitor&rsquo;s voice remembered.</span></span>
@@ -1395,7 +1386,7 @@
         <span>font-size: <span class="val">14px</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
         <span>letter-spacing: <span class="val">0.06em</span></span>
-        <span>color: <span class="val">#1200CC @ 50%</span></span>
+        <span>color: <span class="val">#0000A5 @ 50%</span></span>
         <span>writing-mode: <span class="val">vertical-rl</span></span>
         <span>transform: <span class="val">rotate(180deg) &mdash; reads bottom to top</span></span>
         <span>Column width: <span class="val">48px</span></span>
@@ -1432,38 +1423,67 @@
     <section>
       <div class="spec-label">10 &mdash; Color interaction</div>
       <div class="specimen">
-        <div class="color-grid">
+        <div class="color-grid" style="grid-template-columns: 1fr 1fr; gap: 1px; background: var(--primary);">
+
+          <!-- 1. Pink is the world -->
           <div class="color-panel color-panel--bg">
-            <span class="cp-label">#FFE0DB &mdash; Background</span>
-            <span class="cp-title">The Store</span>
-            <span class="cp-body">Strictly offline.</span>
+            <span class="cp-label">1. Pink is the world</span>
+            <span class="cp-title">The Store.</span>
+            <span class="cp-body">Everything lives on pink. All body text, all titles, all UI — kobalt on pink is the default.</span>
             <span class="cp-meta">Tue&ndash;Sat 10:00&ndash;18:00</span>
           </div>
+
+          <!-- 2. Kobalt is the voice -->
           <div class="color-panel color-panel--surface">
-            <span class="cp-label">#F5D0CB &mdash; Surface</span>
+            <span class="cp-label">2. Kobalt is the voice</span>
             <span class="cp-title">Friday Talk</span>
-            <span class="cp-body">Natural indigo and the future of plant-based dyeing.</span>
+            <span class="cp-body">All typography is kobalt (#0000A5). On pink and on surface. Kobalt is never a background — it is always the letter.</span>
             <span class="cp-meta">28 Mar 2026 &middot; 19:00</span>
           </div>
-          <div class="color-panel color-panel--primary">
-            <span class="cp-label">#1200CC &mdash; Primary</span>
-            <span class="cp-title">The Lab.</span>
-            <span class="cp-body">Wash development, sustainable treatments, and capsule production.</span>
-            <span class="cp-meta">Wash &middot; Laser &middot; Ozone</span>
+
+          <!-- 3. Red is the emphasis -->
+          <div class="color-panel color-panel--bg">
+            <span class="cp-label">3. Red is the emphasis</span>
+            <span class="cp-title" style="color: var(--primary);">Denim City <span style="color: var(--accent);">AMS</span></span>
+            <span class="cp-body">A few words turn red within kobalt text. <span style="color: var(--accent);">Strictly offline.</span> Never a background, never a title — always an accent within a sentence.</span>
           </div>
-          <div class="color-panel color-panel--accent">
-            <span class="cp-label">#FF2B2B &mdash; Accent</span>
-            <span class="cp-title">Strictly offline</span>
-            <span class="cp-body">Strictly offline.</span>
-            <span class="cp-meta">Amsterdam &middot; De Hallen</span>
+
+          <!-- 4. White is the light -->
+          <div class="color-panel color-panel--bg">
+            <span class="cp-label">4. White is the light</span>
+            <span class="cp-title" style="color: var(--white);">Brighter Blue</span>
+            <span class="cp-body" style="color: var(--muted);">Display type at 48px+ goes white on pink, surface, indigo, or black. The fresh element. Never at body size — it disappears.</span>
           </div>
+
+          <!-- 5. Indigo + white -->
+          <div class="color-panel" style="background: #101A38;">
+            <span class="cp-label" style="color: #FFFFFF50;">5. Indigo is the depth</span>
+            <span class="cp-title" style="color: #FFFFFF;">Denim City</span>
+            <span class="cp-body" style="color: #FFFFFF50; font-size: 13px;">White display on indigo. Rare — special moments only.</span>
+          </div>
+
+          <!-- 6. Indigo + kobalt tone-on-tone -->
+          <div class="color-panel" style="background: #101A38;">
+            <span class="cp-label" style="color: #0000A550;">6. Kobalt on indigo</span>
+            <span style="font-family: var(--font-display); font-weight: 700; font-size: 48px; line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; color: #0000A5;">Denim City</span>
+            <span class="cp-body" style="color: #FFFFFF50; font-size: 13px;">Kobalt display on indigo. Rare — special moments only.</span>
+          </div>
+
+          <!-- 7. Black is the formal -->
+          <div class="color-panel" style="background: #000000;">
+            <span class="cp-label" style="color: #FFFFFF50;">7. Black is the formal</span>
+            <span class="cp-title" style="color: #FFFFFF;">Denim City</span>
+            <span class="cp-body" style="color: #FFFFFF50; font-size: 13px;">When color is not available. Print, stamps, favicon.</span>
+          </div>
+
         </div>
       </div>
       <div class="css-values">
-        <span>Primary on bg: <span class="val">default &mdash; all body text</span></span>
-        <span>Primary on surface: <span class="val">agenda cards, panels</span></span>
-        <span>Pink on primary: <span class="val">reversed &mdash; use sparingly</span></span>
-        <span>Pink on accent: <span class="val">reserved &mdash; active pills, key moments only</span></span>
+        <span>Backgrounds: <span class="val">pink, surface, indigo, black</span></span>
+        <span>Never as background: <span class="val">kobalt, red</span></span>
+        <span>Kobalt (#0000A5): <span class="val">always a type color, never a fill</span></span>
+        <span>Red (#FF2B2B): <span class="val">always an accent within text, never standalone</span></span>
+        <span>White (#FFF): <span class="val">display type (48px+) on any background</span></span>
         <span>Rule: <span class="val">never more than 3 colors in any viewport</span></span>
       </div>
     </section>
@@ -1528,11 +1548,11 @@
       </div>
     </section>
 
-    <!-- 12. COLOR PALETTE -->
+    <!-- 12a. CORE PALETTE — BACKGROUNDS -->
     <section>
-      <div class="spec-label">12 &mdash; Color palette</div>
+      <div class="spec-label">12a &mdash; Core palette &mdash; backgrounds</div>
       <div class="specimen">
-        <div class="palette">
+        <div class="palette" style="grid-template-columns: repeat(3, 1fr);">
           <div class="swatch swatch--bg">
             <span class="swatch__name">DC Pink</span>
             <span class="swatch__hex">#FFE0DB</span>
@@ -1541,33 +1561,121 @@
             <span class="swatch__name">DC Surface</span>
             <span class="swatch__hex">#F5D0CB</span>
           </div>
+          <div class="swatch swatch--denim-dark">
+            <span class="swatch__name">Indigo</span>
+            <span class="swatch__hex">#101A38</span>
+          </div>
+        </div>
+      </div>
+      <div class="css-values">
+        <span>Pink (#FFE0DB): <span class="val">the world &mdash; the default background</span></span>
+        <span>Surface (#F5D0CB): <span class="val">cards, panels, deeper pink for layering</span></span>
+        <span>Indigo (#101A38): <span class="val">depth &mdash; special moments, rare</span></span>
+        <span>These are surfaces: <span class="val">things live on them</span></span>
+      </div>
+    </section>
+
+    <!-- 12a+. CORE PALETTE — TYPE COLORS -->
+    <section>
+      <div class="spec-label">12a+ &mdash; Core palette &mdash; type colors</div>
+      <div class="specimen">
+        <div class="palette" style="grid-template-columns: repeat(4, 1fr);">
           <div class="swatch swatch--primary">
-            <span class="swatch__name">DC Blue</span>
-            <span class="swatch__hex">#1200CC</span>
+            <span class="swatch__name">072C</span>
+            <span class="swatch__hex">#0000A5</span>
+          </div>
+          <div class="swatch swatch--denim-white">
+            <span class="swatch__name">Denim White</span>
+            <span class="swatch__hex">#FFFFFF</span>
+          </div>
+          <div class="swatch swatch--denim-black">
+            <span class="swatch__name">Denim Black</span>
+            <span class="swatch__hex">#000000</span>
           </div>
           <div class="swatch swatch--accent">
             <span class="swatch__name">DC Red</span>
             <span class="swatch__hex">#FF2B2B</span>
           </div>
         </div>
-        <div class="palette-ratios">
-          <div class="r-bg">55%</div>
-          <div class="r-surface">25%</div>
-          <div class="r-primary">15%</div>
-          <div class="r-accent">5%</div>
+      </div>
+      <div class="css-values">
+        <span>072C (#0000A5): <span class="val">the voice &mdash; all body text, titles, UI, the default</span></span>
+        <span>Denim White (#FFF): <span class="val">the light &mdash; display type (48px+) on any background</span></span>
+        <span>Denim Black (#000): <span class="val">the weight &mdash; display type (48px+), architectural</span></span>
+        <span>DC Red (#FF2B2B): <span class="val">the emphasis &mdash; AMS, accent phrases, pills, hover. Never standalone</span></span>
+        <span>These are letters: <span class="val">they live on surfaces</span></span>
+      </div>
+    </section>
+
+
+    <!-- 12b. BLUE HUES -->
+    <section>
+      <div class="spec-label">12b &mdash; Blue Hues &mdash; institutional spectrum</div>
+      <div class="specimen">
+        <div class="palette palette--blues">
+          <div class="swatch swatch--denim-black">
+            <span class="swatch__name">Denim Black</span>
+            <span class="swatch__hex">#000000</span>
+          </div>
+          <div class="swatch swatch--denim-dark">
+            <span class="swatch__name">Denim Dark Blue</span>
+            <span class="swatch__hex">#101A38</span>
+          </div>
+          <div class="swatch swatch--denim-electric">
+            <span class="swatch__name">Denim Electric Blue</span>
+            <span class="swatch__hex">#0000A5</span>
+          </div>
+          <div class="swatch swatch--primary">
+            <span class="swatch__name">DC Kobalt</span>
+            <span class="swatch__hex">#0000A5</span>
+          </div>
+          <div class="swatch swatch--denim-light">
+            <span class="swatch__name">Denim Light Blue</span>
+            <span class="swatch__hex">#3E8BF7</span>
+          </div>
+          <div class="swatch swatch--denim-white">
+            <span class="swatch__name">Denim White</span>
+            <span class="swatch__hex">#FFFFFF</span>
+          </div>
         </div>
       </div>
       <div class="css-values">
-        <span>Pink (#FFE0DB): <span class="val">page background &mdash; the neutral, never white</span></span>
-        <span>Surface (#F5D0CB): <span class="val">cards, panels, deeper pink for layering</span></span>
-        <span>Blue (#1200CC): <span class="val">all text, borders, wordmark, nav</span></span>
-        <span>Red (#FF2B2B): <span class="val">AMS tag, hover states, accent phrases, active pills</span></span>
-        <span>White (#FFF): <span class="val">image frames only &mdash; never as background fill</span></span>
-        <span>Rule: <span class="val">never more than 3 colors in any single viewport</span></span>
-        <span>Rule: <span class="val">never introduce a color outside this system</span></span>
-        <span>Rule: <span class="val">no gradients, no drop shadows, no grey</span></span>
-        <span>Location logic: <span class="val">AMS = red pill, SP = green, IST = TBD</span></span>
-        <span>Background tells you: <span class="val">where you are in the network before you read a word</span></span>
+        <span>Source: <span class="val">2018 Denim City Style Guide v.02 &mdash; Main Palette Blue Hues</span></span>
+        <span>Denim Black (#000): <span class="val">logotype negative, high contrast</span></span>
+        <span>Denim Dark Blue (#101A38): <span class="val">indigo &mdash; kobalt type on indigo bg for special moments</span></span>
+        <span>Denim Electric Blue (#0000A5): <span class="val">institutional, Pantone Blue 072C</span></span>
+        <span>DC Kobalt (#0000A5): <span class="val">primary &mdash; all typography, the default</span></span>
+        <span>Denim Light Blue (#3E8BF7): <span class="val">Pantone 2935C &mdash; digital accent, sparingly</span></span>
+        <span>Denim White (#FFF): <span class="val">display type + frames &mdash; the fresh element</span></span>
+        <span>Principle: <span class="val">choose contrasting blues for playful combinations (2018 guide)</span></span>
+      </div>
+    </section>
+
+    <!-- 12c. LOCATION ACCENTS -->
+    <section>
+      <div class="spec-label">12c &mdash; Location accents</div>
+      <div class="specimen">
+        <div class="palette" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="swatch swatch--bg">
+            <span class="swatch__name">AMS &mdash; Brick Red</span>
+            <span class="swatch__hex">#FFE0DB / #FF2B2B</span>
+          </div>
+          <div class="swatch" style="background: #DBEBE7;">
+            <span class="swatch__name">SP &mdash; Bahia Green</span>
+            <span class="swatch__hex">#DBEBE7 / #90EB8F</span>
+          </div>
+          <div class="swatch" style="background: #F0F0F0; color: var(--primary);">
+            <span class="swatch__name">IST &mdash; TBD</span>
+            <span class="swatch__hex">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="css-values">
+        <span>Principle: <span class="val">background color identifies the location before you read a word</span></span>
+        <span>AMS: <span class="val">pink background + red accent (active)</span></span>
+        <span>SP: <span class="val">green background + green accent</span></span>
+        <span>IST: <span class="val">to be determined</span></span>
+        <span>Rule: <span class="val">do not mix location palettes &mdash; one location per page/post</span></span>
       </div>
     </section>
 
@@ -1595,7 +1703,7 @@
             <div class="css-values" style="border-top: none; padding-top: 8px;">
               <span>font: <span class="val">Apercu Pro / 12px / uppercase / 0.06em</span></span>
               <span>padding: <span class="val">2px 10px</span></span>
-              <span>border: <span class="val">1px solid #1200CC</span></span>
+              <span>border: <span class="val">1px solid #0000A5</span></span>
               <span>border-radius: <span class="val">999px</span></span>
               <span>active: <span class="val">bg #FF2B2B, text white, border #FF2B2B</span></span>
               <span>hover: <span class="val">border #FF2B2B, text #FF2B2B</span></span>
@@ -1613,7 +1721,7 @@
             </div>
             <div class="css-values" style="border-top: none; padding-top: 8px;">
               <span>font: <span class="val">Apercu Pro / 14px / uppercase / 0.06em</span></span>
-              <span>default: <span class="val">#1200CC</span></span>
+              <span>default: <span class="val">#0000A5</span></span>
               <span>hover: <span class="val">#FF2B2B</span></span>
               <span>prefix: <span class="val">&rarr; (always present, not just on hover)</span></span>
               <span>rule: <span class="val">no filled buttons anywhere on the homepage</span></span>
@@ -1630,7 +1738,7 @@
               </div>
             </div>
             <div class="css-values" style="border-top: none; padding-top: 8px;">
-              <span>line: <span class="val">1px solid #1200CC, full viewport width</span></span>
+              <span>line: <span class="val">1px solid #0000A5, full viewport width</span></span>
               <span>margin: <span class="val">none &mdash; the line is the spatial signal</span></span>
               <span>label column: <span class="val">48px wide</span></span>
               <span>label: <span class="val">Apercu Pro / 14px / uppercase / 0.06em / vertical-rl</span></span>
@@ -1650,7 +1758,7 @@
             </div>
             <div class="css-values" style="border-top: none; padding-top: 8px;">
               <span>background: <span class="val">#F5D0CB (surface)</span></span>
-              <span>border: <span class="val">1px solid #1200CC</span></span>
+              <span>border: <span class="val">1px solid #0000A5</span></span>
               <span>border-radius: <span class="val">0</span></span>
               <span>padding: <span class="val">24px</span></span>
               <span>date: <span class="val">Apercu Mono / 12px / uppercase</span></span>
@@ -1665,30 +1773,27 @@
 
     <!-- 14. CLIP TEXT -->
     <section>
-      <div class="spec-label">14 &mdash; Clip text</div>
+      <div class="spec-label">14 &mdash; Clip text &mdash; photo through letters</div>
       <div class="specimen">
-        <div class="clip-text-specimen">
-          <div class="clip-text-panel clip-text-panel--pink">
-            <div class="clip-text__display">Brighter Blue</div>
-          </div>
-          <div class="clip-text-panel clip-text-panel--surface">
-            <div class="clip-text__display clip-text__display--alt">Denim City</div>
-          </div>
+        <div style="display: flex; align-items: center; justify-content: center; min-height: 400px;">
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(80px, 12vw, 160px); line-height: 0.85; letter-spacing: -0.03em; text-transform: uppercase; text-align: center; background-image: url('../LEX11796-2.jpg'); background-size: cover; background-position: center; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Brighter Blue</div>
         </div>
       </div>
       <div class="css-values">
         <span>font-family: <span class="val">Topol 700</span></span>
-        <span>font-size: <span class="val">clamp(64px, 8vw, 120px)</span></span>
+        <span>font-size: <span class="val">clamp(80px, 12vw, 160px)</span></span>
         <span>line-height: <span class="val">0.85</span></span>
         <span>letter-spacing: <span class="val">-0.03em</span></span>
         <span>text-transform: <span class="val">uppercase</span></span>
         <span>technique: <span class="val">background-clip: text &mdash; photo visible through letterforms</span></span>
+        <span>background-image: <span class="val">url(&rsquo;../LEX11796-2.jpg&rsquo;)</span></span>
         <span>background-size: <span class="val">cover</span></span>
         <span>background-position: <span class="val">center</span></span>
+        <span>-webkit-background-clip: <span class="val">text</span></span>
         <span>-webkit-text-fill-color: <span class="val">transparent</span></span>
+        <span>When to use: <span class="val">hero moments, social posts &mdash; max 1 per 9 in a grid</span></span>
+        <span>When not to use: <span class="val">body text, small scale &mdash; minimum 80px to read the photo</span></span>
         <span>Photo: <span class="val">high-contrast denim imagery works best</span></span>
-        <span>Scale: <span class="val">display only &mdash; minimum 64px</span></span>
-        <span>Usage: <span class="val">hero moments, social posts &mdash; max 1 per 9 in a grid</span></span>
       </div>
     </section>
 
@@ -1703,11 +1808,15 @@
               <li>Use Topol at display scale (32px and above) for structure and headlines</li>
               <li>Use Apercu Pro Regular at 16px for body copy in sentence case</li>
               <li>Use Apercu Mono at 12px for metadata, dates, times, and specs</li>
+              <li>AMS always in Apercu Mono &mdash; typeface distinguishes context from name</li>
               <li>Left-align pull quotes &mdash; they carry voice, not decoration</li>
               <li>Maintain the uppercase/sentence case boundary at 16px</li>
               <li>Use bold+regular mixed weight in pull quotes to emphasize the key phrase</li>
               <li>Keep compositions to 2 type families maximum</li>
               <li>Use Apercu Pro Italic for testimonials to signal &ldquo;someone else is speaking&rdquo;</li>
+              <li>White type only at display scale (48px+), never at body size</li>
+              <li>Kobalt on indigo only for special moments, max 1 per 12 posts</li>
+              <li>The logo is a system: DENIM CITY (Topol) + context (Mono) &mdash; typeface distinguishes, not scale</li>
             </ul>
           </div>
           <div class="donts-col donts-col--dont">
@@ -1715,12 +1824,15 @@
             <ul>
               <li>Never use Topol at body scale (16px or below) &mdash; it loses its architectural quality</li>
               <li>Never use Mono for titles &mdash; it is factual, not structural</li>
+              <li>Never set AMS in Topol &mdash; AMS is always Apercu Mono</li>
               <li>Never center pull quotes &mdash; centered reads as decoration, not voice</li>
               <li>Never use sentence case at display scale (except body copy at 16px)</li>
               <li>Never mix more than 2 type families in one composition</li>
               <li>Never set testimonials in bold &mdash; italic separates visitor voice from brand voice</li>
               <li>Never use Apercu Pro Bold for body copy &mdash; bold is reserved for pull quotes at display scale</li>
               <li>Never introduce a typeface outside this system</li>
+              <li>No colored background blocks as layout device &mdash; no Mondrian</li>
+              <li>Never use white type at body size (16px) &mdash; unreadable on pink</li>
             </ul>
           </div>
         </div>
