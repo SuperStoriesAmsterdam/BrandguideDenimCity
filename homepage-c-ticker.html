@@ -216,18 +216,20 @@
       to   { transform: translateX(-50%); }
     }
 
-    /* ── Center: type + video ── */
+    /* ── Center: type + video stacked ── */
     .hero__center {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
     }
 
     .hero__type {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 48px;
-      border-right: 1px solid var(--primary);
+      padding: 56px 48px;
+      border-bottom: 1px solid var(--primary);
+    }
+
+    .hero__video {
+      height: clamp(280px, 40vh, 420px);
     }
 
     .hero__title {
@@ -1008,17 +1010,12 @@
     @media (max-width: 768px) {
       .nav { padding: 16px 24px; }
       .nav__links { display: none; }
-      .hero__center {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 50svh;
-      }
       .hero__type {
         padding: 32px 24px;
-        border-right: none;
-        border-bottom: 1px solid var(--primary);
       }
-      .hero__title-main { font-size: clamp(48px, 14vw, 80px); }
-      .hero__title-pre { font-size: clamp(20px, 4vw, 36px); }
+      .hero__video { height: clamp(200px, 35vh, 300px); }
+      .hero__title-main { font-size: clamp(56px, 14vw, 100px); }
+      .hero__title-pre { font-size: clamp(24px, 5vw, 44px); }
       .hero__marquee--reverse .hero__marquee-item {
         font-size: clamp(16px, 5vw, 24px);
       }
