@@ -216,20 +216,18 @@
       to   { transform: translateX(-50%); }
     }
 
-    /* ── Center: type + video stacked ── */
+    /* ── Center: type + video side by side ── */
     .hero__center {
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr;
     }
 
     .hero__type {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 56px 48px;
-      border-bottom: 1px solid var(--primary);
-    }
-
-    .hero__video {
-      height: clamp(280px, 40vh, 420px);
+      border-right: 1px solid var(--primary);
     }
 
     .hero__title {
@@ -240,7 +238,7 @@
       display: block;
       font-family: var(--font-body);
       font-style: italic;
-      font-size: clamp(40px, 6vw, 80px);
+      font-size: clamp(24px, 3.5vw, 52px);
       letter-spacing: 0.06em;
       color: var(--primary);
       margin-bottom: 4px;
@@ -253,18 +251,18 @@
       display: block;
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: clamp(100px, 17vw, 260px);
+      font-size: clamp(72px, 9.5vw, 156px);
       line-height: 0.82;
       letter-spacing: -0.04em;
       color: var(--primary);
     }
 
     .hero__sub {
-      margin-top: 24px;
+      margin-top: 20px;
       font-family: var(--font-body);
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.5;
-      max-width: 420px;
+      max-width: 380px;
       opacity: 0.7;
     }
 
@@ -1010,12 +1008,17 @@
     @media (max-width: 768px) {
       .nav { padding: 16px 24px; }
       .nav__links { display: none; }
+      .hero__center {
+        grid-template-columns: 1fr;
+      }
       .hero__type {
         padding: 32px 24px;
+        border-right: none;
+        border-bottom: 1px solid var(--primary);
       }
-      .hero__video { height: clamp(200px, 35vh, 300px); }
-      .hero__title-main { font-size: clamp(56px, 14vw, 100px); }
-      .hero__title-pre { font-size: clamp(24px, 5vw, 44px); }
+      .hero__video { height: clamp(200px, 40vh, 320px); }
+      .hero__title-main { font-size: clamp(48px, 12vw, 80px); }
+      .hero__title-pre { font-size: clamp(20px, 4vw, 36px); }
       .hero__marquee--reverse .hero__marquee-item {
         font-size: clamp(16px, 5vw, 24px);
       }
