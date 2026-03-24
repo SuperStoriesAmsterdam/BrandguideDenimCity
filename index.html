@@ -8,6 +8,10 @@
   <link rel="preload" href="fonts/Topol-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Apercu-Pro-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Apercu-Mono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://media.superstories.com/denimcity/LEX11796-2.jpg" as="image">
+  <link rel="preload" href="https://media.superstories.com/denimcity/LEX11613.JPG" as="image">
+  <link rel="preload" href="https://media.superstories.com/denimcity/House%20of%20Denim/LEX11565-2.jpg" as="image">
+  <link rel="preload" href="https://media.superstories.com/denimcity/House%20of%20Denim/LEX11680%202.JPG" as="image">
 
   <style>
     @font-face {
@@ -182,27 +186,26 @@
       align-items: center;
       justify-content: center;
     }
-    .hero__clip-wrap {
-      position: relative;
-      width: 100%;
-      padding: 0 48px;
-    }
-    .hero__clip-svg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .hero__clip-images {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-    }
-    .hero__clip-images img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .hero__clip {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(100px, 18vw, 280px);
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0 24px;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image:
+        url('https://media.superstories.com/denimcity/LEX11796-2.jpg'),
+        url('https://media.superstories.com/denimcity/LEX11613.JPG'),
+        url('https://media.superstories.com/denimcity/House%20of%20Denim/LEX11565-2.jpg'),
+        url('https://media.superstories.com/denimcity/House%20of%20Denim/LEX11680%202.JPG');
+      background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+      background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+      background-repeat: no-repeat;
     }
     .hero__sub {
       position: absolute;
@@ -975,22 +978,7 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero__clip-wrap">
-      <svg class="hero__clip-svg" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <clipPath id="text-clip">
-            <text x="50%" y="200" text-anchor="middle" font-family="'Topol', sans-serif" font-weight="700" font-size="260" letter-spacing="-10">BRIGHTER</text>
-            <text x="50%" y="430" text-anchor="middle" font-family="'Topol', sans-serif" font-weight="700" font-size="260" letter-spacing="-10">BLUE</text>
-          </clipPath>
-        </defs>
-        <g clip-path="url(#text-clip)">
-          <image href="https://media.superstories.com/denimcity/LEX11796-2.jpg" x="0" y="0" width="600" height="250" preserveAspectRatio="xMidYMid slice" />
-          <image href="https://media.superstories.com/denimcity/LEX11613.JPG" x="600" y="0" width="600" height="250" preserveAspectRatio="xMidYMid slice" />
-          <image href="https://media.superstories.com/denimcity/House%20of%20Denim/LEX11565-2.jpg" x="0" y="250" width="600" height="250" preserveAspectRatio="xMidYMid slice" />
-          <image href="https://media.superstories.com/denimcity/House%20of%20Denim/LEX11680%202.JPG" x="600" y="250" width="600" height="250" preserveAspectRatio="xMidYMid slice" />
-        </g>
-      </svg>
-    </div>
+    <div class="hero__clip">Brighter<br>Blue</div>
     <p class="hero__sub">The only place in the world where you can see, learn, and touch the full story of denim.</p>
     <div class="hero__bottom">
       <div class="hero__pills">
@@ -1059,7 +1047,7 @@
 
       <!-- Store image — tall right -->
       <div class="m-item m-store-img">
-        <img src="herojpg.jpg" alt="Denim City — De Hallen">
+        <img src="https://media.superstories.com/denimcity/Store-Bearbrick.jpg" alt="Denim City Store" loading="lazy">
       </div>
 
       <!-- Education -->
@@ -1078,7 +1066,7 @@
 
       <!-- Education image -->
       <div class="m-item m-education-img">
-        <img src="LEX11796-2.jpg" alt="Denim City atelier">
+        <img src="https://media.superstories.com/denimcity/Education-Incubator-SolidaritySelvedge-3.jpg" alt="Denim City education" loading="lazy">
       </div>
 
       <!-- Lab -->
@@ -1101,7 +1089,7 @@
 
       <!-- Collaborate image -->
       <div class="m-item m-collaborate-img">
-        <img src="LEX11796-2.jpg" alt="Denim City atelier">
+        <img src="https://media.superstories.com/denimcity/House%20of%20Denim/LEX11570.JPG" alt="Denim City collaborate" loading="lazy">
       </div>
 
       <!-- Collaborate -->
@@ -1177,7 +1165,7 @@
       <!-- Feature — left, tall -->
       <article class="press-card press-feature">
         <div class="press-card__img">
-          <img src="LEX11796-2.jpg" alt="Denim City atelier" style="height: 320px;">
+          <img src="https://media.superstories.com/denimcity/LEX11796-2.jpg" alt="Denim City atelier" style="height: 320px;" loading="lazy">
         </div>
         <div class="press-card__body">
           <div class="press-card__pills">
@@ -1210,7 +1198,7 @@
       <!-- Mid bottom -->
       <article class="press-card press-mid-bottom">
         <div class="press-card__img">
-          <img src="herojpg.jpg" alt="Denim City team" style="height: 160px;">
+          <img src="https://media.superstories.com/denimcity/DenimCity-Customize.JPG" alt="Denim City customize" style="height: 160px;" loading="lazy">
         </div>
         <div class="press-card__body">
           <div class="press-card__pills">
@@ -1239,12 +1227,12 @@
   <div class="rule"></div>
   <section class="tours-overlay" id="tours-overlay">
     <div class="tours-overlay__bg">
-      <img src="herojpg.jpg" alt="Denim City De Hallen">
+      <img src="https://media.superstories.com/denimcity/HomepageHeroOption.jpg" alt="Denim City De Hallen" loading="lazy">
     </div>
     <div class="tours-overlay__card">
       <h2 class="tours-overlay__title">After this tour, denim will never be the same again.</h2>
       <div class="tours-overlay__img">
-        <img src="LEX11796-2.jpg" alt="Denim City atelier">
+        <img src="https://media.superstories.com/denimcity/House%20of%20Denim/LEX12616.jpg" alt="Denim City tour" loading="lazy">
       </div>
       <p class="tours-overlay__body">Commercial or educational. Book a tour and see the full value chain of denim — from fibre to finish.</p>
       <div class="tours-overlay__links">
