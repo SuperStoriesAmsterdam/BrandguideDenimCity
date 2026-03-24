@@ -6,8 +6,5 @@ screenshotshomepage/
 brand-typography-shareable.html
 brand-typography-shareable.zip
 *.pdf
-*.jpg
-*.JPG
-*.jpeg
 .env
 .envnano .env
