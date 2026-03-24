@@ -9,3 +9,5 @@ brand-typography-shareable.zip
 *.jpg
 *.JPG
 *.jpeg
+.env
+.envnano .env
