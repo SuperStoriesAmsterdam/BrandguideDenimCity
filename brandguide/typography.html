@@ -1394,136 +1394,123 @@
       </div>
     </section>
 
-    <!-- ── Section 08: Homepage grid corrections ── -->
+    <!-- ── Section 08: Homepage grid — live example ── -->
     <section class="type-section">
       <div class="section-header">
         <div class="section-label">08</div>
-        <div class="section-title">Homepage grid — corrections</div>
+        <div class="section-title">Homepage grid — live example</div>
       </div>
 
-      <!-- Error table -->
-      <div style="margin-bottom: var(--sp-6);">
-        <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-3);">Design system violations found in production</div>
-        <div style="border: 1px solid var(--border);">
-          <!-- Header row -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr 2fr; border-bottom: 1px solid var(--border); background: var(--surface);">
-            <div style="padding: var(--sp-2) var(--sp-3); font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em;">As found</div>
-            <div style="padding: var(--sp-2) var(--sp-3); font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; border-left: 1px solid var(--border);">Corrected</div>
-            <div style="padding: var(--sp-2) var(--sp-3); font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; border-left: 1px solid var(--border);">Rule</div>
+      <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-3);">Corrected reconstruction of the homepage explore section — periods removed from all headlines</div>
+
+      <!-- GRID WRAPPER -->
+      <div style="border: 1px solid var(--border); overflow: hidden;">
+
+        <!-- ── ROW 1: EXPLORE / THE STORE / Image ── -->
+        <div style="display: grid; grid-template-columns: 40px 3fr 2fr; border-bottom: 1px solid var(--border);">
+
+          <!-- EXPLORE vertical label -->
+          <div style="border-right: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: var(--sp-6) 0; min-height: 200px;">
+            <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; writing-mode: vertical-rl; transform: rotate(180deg); color: var(--primary);">Explore</span>
           </div>
-          <!-- Row 1 -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr 2fr; border-bottom: 1px solid var(--border);">
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary);">THE STORE.</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary); border-left: 1px solid var(--border);">THE STORE</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary); border-left: 1px solid var(--border);">No periods after headlines. The size and weight carry the emphasis — a period is redundant and weakens the structure.</div>
+
+          <!-- THE STORE cell -->
+          <div style="padding: var(--sp-5) var(--sp-5); border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: flex-end;">
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-headline); line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">The store</div>
+            <!-- "Strictly offline" — tagline, AMS Red, no period (corrected) -->
+            <div style="font-family: var(--font-body); font-size: var(--type-intro); font-style: italic; color: var(--accent); margin-bottom: var(--sp-4);">Strictly offline</div>
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary);">→ Explore the store</div>
           </div>
-          <!-- Row 2 -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr 2fr; border-bottom: 1px solid var(--border);">
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary);">MAKE YOUR OWN JEANS.</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary); border-left: 1px solid var(--border);">MAKE YOUR OWN JEANS</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary); border-left: 1px solid var(--border);">Same rule. All Topol Bold UPPERCASE headlines are unpunctuated. Applies across the entire homepage grid.</div>
+
+          <!-- Image cell -->
+          <div style="background: var(--surface); min-height: 240px; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);">Photo — De Hallen</span>
           </div>
-          <!-- Row 3 -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr 2fr; border-bottom: 1px solid var(--border);">
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary);">THE LAB.</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary); border-left: 1px solid var(--border);">THE LAB</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary); border-left: 1px solid var(--border);">No periods after headlines.</div>
-          </div>
-          <!-- Row 4 -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr 2fr;">
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary);">WORK WITH US.</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; line-height: 0.95; letter-spacing: -0.01em; color: var(--primary); border-left: 1px solid var(--border);">WORK WITH US</div>
-            <div style="padding: var(--sp-3); font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary); border-left: 1px solid var(--border);">No periods after headlines. "Strictly offline." in the same section also violates this rule when used as a tagline rather than body copy.</div>
-          </div>
+
         </div>
-      </div>
 
-      <!-- Corrected homepage grid demo -->
-      <div>
-        <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-3);">Corrected — homepage grid section</div>
+        <!-- ── ROW 2: Education / Photo / Lab ── -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr 2fr; border-bottom: 1px solid var(--border);">
 
-        <div style="border: 1px solid var(--border); overflow: hidden;">
-
-          <!-- Row 1: full-width headline cell -->
-          <div style="display: grid; grid-template-columns: 56px 1fr; border-bottom: 1px solid var(--border);">
-            <!-- Vertical label -->
-            <div style="border-right: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: var(--sp-5) 0; background: var(--surface);">
-              <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; writing-mode: vertical-rl; transform: rotate(180deg);">Explore</span>
+          <!-- EDUCATION cell -->
+          <div style="padding: var(--sp-5) var(--sp-4); border-right: 1px solid var(--border);">
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Education</div>
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-headline); line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-5);">Make your<br>own jeans</div>
+            <!-- Stat block -->
+            <div style="margin-bottom: var(--sp-4);">
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-numeric); line-height: 0.9; color: var(--primary);">90%</div>
+              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-top: var(--sp-1);">Of visitors who find us, book</div>
             </div>
-            <!-- Headline cell -->
-            <div style="padding: var(--sp-5) var(--sp-5);">
-              <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-headline); line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary);">The store</div>
-            </div>
+            <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">Five days, your own hands, one pair of jeans.</div>
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary);">→ All courses</div>
           </div>
 
-          <!-- Row 2: 3 content cells -->
-          <div style="display: grid; grid-template-columns: 56px 1fr 1fr 1fr; border-bottom: 1px solid var(--border);">
-            <!-- Spacer -->
-            <div style="border-right: 1px solid var(--border); background: var(--surface);"></div>
+          <!-- Photo cell (tailor) -->
+          <div style="background: var(--surface); border-right: 1px solid var(--border); min-height: 320px; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); writing-mode: vertical-rl;">Photo — Workshop</span>
+          </div>
 
-            <!-- Cell: Education -->
-            <div style="padding: var(--sp-5) var(--sp-4); border-right: 1px solid var(--border);">
-              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Education</div>
-              <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 3vw, 32px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">Make your own jeans</div>
-              <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">A one-day workshop where you build a pair of jeans from scratch. No prior experience needed.</div>
-              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Book</div>
-            </div>
-
-            <!-- Cell: Lab -->
-            <div style="padding: var(--sp-5) var(--sp-4); border-right: 1px solid var(--border);">
+          <!-- LAB & ATELIER cell -->
+          <div style="padding: var(--sp-5) var(--sp-4); position: relative; overflow: hidden;">
+            <!-- Decorative section number -->
+            <div style="position: absolute; right: -8px; top: -16px; font-family: var(--font-display); font-weight: 700; font-size: 140px; line-height: 1; color: var(--muted); pointer-events: none; user-select: none;">01</div>
+            <div style="position: relative;">
               <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Lab &amp; Atelier</div>
-              <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 3vw, 32px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">The lab</div>
-              <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">The only denim laundry lab in the Netherlands. Test, wash, experiment.</div>
-              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Visit</div>
-            </div>
-
-            <!-- Cell: Collaborate -->
-            <div style="padding: var(--sp-5) var(--sp-4);">
-              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Collaborate</div>
-              <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 3vw, 32px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">Work with us</div>
-              <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">Partner with the leading denim hub in Amsterdam. Residencies, pop-ups, and custom projects.</div>
-              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Let's talk</div>
-            </div>
-          </div>
-
-          <!-- Row 3: streamer cell -->
-          <div style="display: grid; grid-template-columns: 56px 1fr; border-bottom: 1px solid var(--border);">
-            <div style="border-right: 1px solid var(--border); background: var(--surface);"></div>
-            <div style="padding: var(--sp-5) var(--sp-5); background: var(--surface);">
-              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-3);">Streamer</div>
-              <!-- Streamer: Bold UPRIGHT + Regular ITALIC — both UPPERCASE -->
-              <p class="t-streamer" style="font-family: var(--font-body); font-size: var(--type-streamer); line-height: 1.05; text-transform: uppercase; letter-spacing: -0.01em; color: var(--primary); font-style: italic; font-weight: 400;"><strong style="font-style: normal; font-weight: 700;">Inside Amsterdam's denim</strong> <em style="font-style: italic; font-weight: 400;">innovation hub</em> <strong style="font-style: normal; font-weight: 700;">where material literacy replaces</strong> <em style="font-style: italic; font-weight: 400;">sustainability</em> <strong style="font-style: normal; font-weight: 700;">as the appetite</strong></p>
-            </div>
-          </div>
-
-          <!-- Row 4: annotation callout row -->
-          <div style="display: grid; grid-template-columns: 56px 1fr;">
-            <div style="border-right: 1px solid var(--border); background: var(--surface);"></div>
-            <div style="padding: var(--sp-4) var(--sp-5); display: flex; gap: var(--sp-5); flex-wrap: wrap;">
-              <div style="display: flex; align-items: flex-start; gap: var(--sp-2);">
-                <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); flex-shrink: 0; margin-top: 2px;">✓</div>
-                <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary);">Topol Bold UPPERCASE headlines — no periods</div>
+              <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-headline); line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-4);">The lab</div>
+              <div style="font-family: var(--font-body); font-size: var(--type-body); font-style: italic; line-height: 1.5; color: var(--primary); margin-bottom: var(--sp-4);">The only denim laundry lab in the Netherlands.</div>
+              <!-- Tags -->
+              <div style="display: flex; gap: var(--sp-1); flex-wrap: wrap; margin-bottom: var(--sp-4);">
+                <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--border); padding: 4px 10px;">Wash</span>
+                <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--border); padding: 4px 10px;">Laser</span>
+                <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--border); padding: 4px 10px;">Ozone</span>
               </div>
-              <div style="display: flex; align-items: flex-start; gap: var(--sp-2);">
-                <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); flex-shrink: 0; margin-top: 2px;">✓</div>
-                <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary);">Apercu Mono UPPERCASE category labels</div>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: var(--sp-2);">
-                <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); flex-shrink: 0; margin-top: 2px;">✓</div>
-                <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary);">Streamer: Bold upright + Regular italic (not Bold Italic)</div>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: var(--sp-2);">
-                <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); flex-shrink: 0; margin-top: 2px;">✓</div>
-                <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary);">Apercu Pro Regular body text — sentence case, lowercase</div>
-              </div>
-              <div style="display: flex; align-items: flex-start; gap: var(--sp-2);">
-                <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); flex-shrink: 0; margin-top: 2px;">✓</div>
-                <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5; color: var(--primary);">AMS Red on → links and one emphasis per block only</div>
-              </div>
+              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary);">→ The lab</div>
             </div>
           </div>
 
         </div>
+
+        <!-- ── ROW 3: Team photo / Collaborate / Tours ── -->
+        <div style="display: grid; grid-template-columns: 2fr 2fr 1.5fr;">
+
+          <!-- Team photo cell -->
+          <div style="background: var(--surface); border-right: 1px solid var(--border); min-height: 300px; display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);">Photo — Team</span>
+          </div>
+
+          <!-- COLLABORATE cell -->
+          <div style="padding: var(--sp-5) var(--sp-4); border-right: 1px solid var(--border); display: flex; flex-direction: column; justify-content: flex-end;">
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Collaborate</div>
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-headline); line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-4);">Work<br>with us</div>
+            <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">Brands, students, researchers. The lab and the knowledge are here. Bring your question.</div>
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary);">→ Collaborate</div>
+          </div>
+
+          <!-- TOURS cell -->
+          <div style="padding: var(--sp-5) var(--sp-4); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-4);">Tours</div>
+              <!-- Testimonial quote — italic Apercu Pro, sentence case, no period correction needed on quotes -->
+              <div style="font-family: var(--font-body); font-size: clamp(18px, 2.5vw, 28px); font-style: italic; line-height: 1.25; color: var(--primary); margin-bottom: var(--sp-5);">"After this tour, denim will never be the same again."</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: var(--sp-2);">
+              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary);">→ Book commercial</div>
+              <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary);">→ Book educational</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Corrections note -->
+      <div style="border: 1px solid var(--border); border-top: none; padding: var(--sp-3) var(--sp-4); background: var(--surface); display: flex; gap: var(--sp-5); flex-wrap: wrap;">
+        <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);">Corrections applied:</div>
+        <div style="font-family: var(--font-body); font-size: var(--type-small); color: var(--primary);">THE STORE → no period</div>
+        <div style="font-family: var(--font-body); font-size: var(--type-small); color: var(--primary);">MAKE YOUR OWN JEANS → no period</div>
+        <div style="font-family: var(--font-body); font-size: var(--type-small); color: var(--primary);">THE LAB → no period</div>
+        <div style="font-family: var(--font-body); font-size: var(--type-small); color: var(--primary);">WORK WITH US → no period</div>
+        <div style="font-family: var(--font-body); font-size: var(--type-small); color: var(--primary);">Strictly offline → no period</div>
       </div>
 
     </section>
