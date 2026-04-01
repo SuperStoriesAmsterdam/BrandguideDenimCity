@@ -221,9 +221,10 @@
     .section-title {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: var(--type-h2);
+      font-size: var(--type-h1);
       letter-spacing: -0.01em;
       text-transform: uppercase;
+      line-height: 1.0;
     }
 
     /* ── Specimen rows ── */
@@ -751,7 +752,7 @@
 
     <!-- ── Page header ── -->
     <header class="page-header">
-      <div class="page-header__title">Typography system</div>
+      <div class="page-header__title" style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-h1); line-height: 1.0; letter-spacing: -0.01em; text-transform: uppercase;">Typography<br>system</div>
       <p class="page-header__intro">Three fonts. Two modes. One voice. The typographic system creates two distinct registers — an expressive homepage mode and a functional inner-page mode — that together form the full character of the brand.</p>
     </header>
 
@@ -1240,6 +1241,121 @@
           <div class="rules-row__key">Lowercase</div>
           <div class="rules-row__cell">Body text only — intentional bridge to inner pages</div>
           <div class="rules-row__cell">Dominant — sentence case throughout</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         06 — COLOR IN TYPOGRAPHY
+    ══════════════════════════════════════ -->
+    <section class="type-section">
+      <div class="section-header">
+        <div class="section-label">06</div>
+        <div class="section-title">Color in typography</div>
+      </div>
+
+      <!-- Three surfaces -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border);">
+
+        <!-- Pink -->
+        <div style="padding: var(--sp-5) var(--sp-4); border-right: 1px solid var(--border);">
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-4);">Surface: DC Pink #FFE0DB</div>
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">MAKE YOUR<br>OWN JEANS</div>
+          <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-3);">A one-day workshop. Selvedge denim, straight leg, your measurements.</div>
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Book workshop</div>
+        </div>
+
+        <!-- Dark navy -->
+        <div style="padding: var(--sp-5) var(--sp-4); background: #101A38; border-right: 1px solid var(--border);">
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,224,219,0.35); margin-bottom: var(--sp-4);">Surface: Dark Navy #101A38</div>
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(28px, 3vw, 40px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--white); margin-bottom: var(--sp-3);">DENIM<br>CITY <span style="color: var(--accent);">AMS</span></div>
+          <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--white); margin-bottom: var(--sp-3);">Connecting the next generation with the forefront of the denim world.</div>
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Learn more</div>
+        </div>
+
+        <!-- Rules -->
+        <div style="padding: var(--sp-5) var(--sp-4);">
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-4);">Color rules</div>
+          <div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 4px;">Text on pink</div>
+              <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5;">Always DC Blue (#0000A5). AMS Red for emphasis max once per block.</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 4px;">Text on dark navy</div>
+              <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5;">Always white (#FFFFFF). AMS in accent red. Never blue text on dark.</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 4px;">AMS Red</div>
+              <div style="font-family: var(--font-body); font-size: var(--type-small); line-height: 1.5;">Location identifier. Active states. One emphasis per block maximum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         07 — IN PRACTICE
+    ══════════════════════════════════════ -->
+    <section class="type-section">
+      <div class="section-header">
+        <div class="section-label">07</div>
+        <div class="section-title">In practice</div>
+      </div>
+
+      <!-- Card component -->
+      <div style="margin-bottom: var(--sp-5);">
+        <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-3);">Card — homepage grid cell</div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border);">
+          <div style="padding: var(--sp-5) var(--sp-4); border-right: 1px solid var(--border);">
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Education</div>
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(24px, 3vw, 36px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">Make your own jeans</div>
+            <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">A one-day workshop where you build a pair of jeans from scratch.</div>
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Book</div>
+          </div>
+          <div style="padding: var(--sp-5) var(--sp-4); border-right: 1px solid var(--border);">
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Store</div>
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(24px, 3vw, 36px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">Selvedge collection</div>
+            <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">Start-up and established brands. The only denim store with a true focus.</div>
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Explore</div>
+          </div>
+          <div style="padding: var(--sp-5) var(--sp-4);">
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Lab</div>
+            <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(24px, 3vw, 36px); line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; color: var(--primary); margin-bottom: var(--sp-3);">Laundry lab</div>
+            <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); margin-bottom: var(--sp-4);">The only denim laundry lab in the Netherlands. Test, wash, experiment.</div>
+            <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent);">→ Visit</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inner page component -->
+      <div style="margin-bottom: var(--sp-5);">
+        <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-3);">Inner page — article header</div>
+        <div style="border: 1px solid var(--border); padding: var(--sp-5) var(--sp-5);">
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-2);">Workshop · Education</div>
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: var(--type-h1); line-height: 1.05; letter-spacing: -0.01em; color: var(--primary); margin-bottom: var(--sp-3);">The denim repair workshop</div>
+          <div style="font-family: var(--font-body); font-size: var(--type-intro); line-height: 1.5; color: var(--primary); max-width: 600px; margin-bottom: var(--sp-3);">We cover the three most common repairs: crotch blowout, knee patches, and hem redoing. You leave with the skills and the tools.</div>
+          <div style="font-family: var(--font-body); font-weight: 700; font-size: var(--type-h3); color: var(--primary); margin-bottom: var(--sp-2);">What you'll learn</div>
+          <div style="font-family: var(--font-body); font-size: var(--type-body); line-height: 1.6; color: var(--primary); max-width: 600px;">Classes run every Saturday morning. Bring your own denim — we work with what you have, not what we sell. Duration: 3 hours. Max 8 participants.</div>
+        </div>
+      </div>
+
+      <!-- Diap component -->
+      <div>
+        <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-3);">Institutional block — dark navy diap</div>
+        <div style="border: 1px solid var(--border); background: #101A38; padding: var(--sp-6) var(--sp-5);">
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,224,219,0.35); margin-bottom: var(--sp-4);">Denim City AMS</div>
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(48px, 7vw, 96px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; color: var(--white); margin-bottom: var(--sp-5);">Denim<br>City <span style="color: var(--accent);">AMS</span><br><span style="font-size: 0.6em; color: var(--white);">Denim<br>Next</span></div>
+          <div style="border-top: 1px solid rgba(255,224,219,0.15); padding-top: var(--sp-4); display: flex; gap: var(--sp-6);">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,224,219,0.35); margin-bottom: var(--sp-1);">Text color</div>
+              <div style="font-family: var(--font-body); font-size: var(--type-small); color: var(--white);">Always white — never blue on dark</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,224,219,0.35); margin-bottom: var(--sp-1);">Location</div>
+              <div style="font-family: var(--font-body); font-size: var(--type-small); color: var(--accent);">AMS Red — always</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
