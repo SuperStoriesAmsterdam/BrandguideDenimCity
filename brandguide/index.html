@@ -75,6 +75,7 @@
       --white:   #FFFFFF;
       --muted:   #0000A540;
       --border:  #0000A5;
+      --dark:    #101A38;
 
       /* Fonts */
       --font-display: 'Topol', sans-serif;
@@ -390,6 +391,126 @@
       margin-top: 2px;
     }
 
+    /* ── Color usage rules ── */
+    .color-usage {
+      border-top: 1px solid var(--border);
+      margin-top: -1px;
+    }
+    .color-usage-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      border-bottom: 1px solid var(--border);
+      min-height: var(--sp-5);
+    }
+    .color-usage-row__label {
+      font-family: var(--font-mono);
+      font-size: var(--type-label);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      padding: var(--sp-2) var(--sp-3);
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+    }
+    .color-usage-row__text {
+      font-family: var(--font-body);
+      font-size: var(--type-small);
+      line-height: 1.5;
+      padding: var(--sp-2) var(--sp-4);
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── Diap block ── */
+    .diap-block {
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      margin-top: var(--sp-5);
+    }
+    .diap-block__inner {
+      padding: var(--sp-6) var(--sp-5);
+    }
+    .diap-block__label {
+      font-family: var(--font-mono);
+      font-size: var(--type-label);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,224,219,0.4);
+      margin-bottom: var(--sp-5);
+    }
+    .diap-block__wordmark {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(48px, 7vw, 96px);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: var(--sp-6);
+    }
+    .diap-block__wordmark .ams {
+      color: var(--accent);
+    }
+    .diap-block__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-6);
+      border-top: 1px solid rgba(255,224,219,0.15);
+      padding-top: var(--sp-5);
+    }
+    .diap-block__body {
+      font-family: var(--font-body);
+      font-size: var(--type-body);
+      line-height: 1.6;
+      color: var(--white);
+    }
+    .diap-block__meta {
+      font-family: var(--font-mono);
+      font-size: var(--type-label);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,224,219,0.4);
+      margin-bottom: var(--sp-2);
+    }
+    .diap-block__nav {
+      display: flex;
+      gap: var(--sp-4);
+      margin-top: var(--sp-3);
+    }
+    .diap-block__nav-item {
+      font-family: var(--font-mono);
+      font-size: var(--type-label);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--white);
+    }
+    .diap-block__nav-item.active::before {
+      content: '→ ';
+      color: var(--accent);
+    }
+    .diap-block__rules {
+      border-top: 1px solid rgba(255,224,219,0.15);
+      margin-top: var(--sp-4);
+      padding-top: var(--sp-3);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--sp-1);
+    }
+    .diap-rule {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255,224,219,0.6);
+      border: 1px solid rgba(255,224,219,0.2);
+      padding: 2px var(--sp-1);
+    }
+    .diap-rule--accent {
+      color: var(--accent);
+      border-color: rgba(255,43,43,0.4);
+    }
+
     /* ── Spacing system ── */
     .spacing-section {
       margin-top: var(--sp-7);
@@ -564,29 +685,91 @@
       </div>
     </section>
 
-    <!-- ── Color palette ── -->
+    <!-- ── Color system ── -->
     <section class="palette">
       <div class="section-label">Color system</div>
-      <div class="swatches">
-        <div class="swatch swatch--bg">
-          <div class="swatch__name">DC Pink</div>
-          <div class="swatch__token">--bg</div>
-          <div class="swatch__hex">#FFE0DB</div>
+
+      <!-- Blue spectrum -->
+      <div class="swatches" style="border-top: 1px solid var(--border);">
+        <div class="swatch" style="background: var(--dark); color: var(--white); border-right: 1px solid var(--border);">
+          <div class="swatch__name">Denim Dark Blue</div>
+          <div class="swatch__token">--dark</div>
+          <div class="swatch__hex">#101A38</div>
+          <div class="swatch__token" style="margin-top: 4px;">Diap backgrounds</div>
         </div>
-        <div class="swatch swatch--surface">
-          <div class="swatch__name">DC Surface</div>
-          <div class="swatch__token">--surface</div>
-          <div class="swatch__hex">#F5D0CB</div>
-        </div>
-        <div class="swatch swatch--primary">
-          <div class="swatch__name">DC Blue</div>
+        <div class="swatch" style="background: var(--primary); color: var(--white); border-right: 1px solid var(--border);">
+          <div class="swatch__name">Electric Blue</div>
           <div class="swatch__token">--primary</div>
           <div class="swatch__hex">#0000A5</div>
+          <div class="swatch__token" style="margin-top: 4px;">Text, borders, structure</div>
         </div>
-        <div class="swatch swatch--accent">
+        <div class="swatch" style="background: var(--accent); color: var(--white); border-right: 1px solid var(--border);">
           <div class="swatch__name">AMS Red</div>
           <div class="swatch__token">--accent</div>
           <div class="swatch__hex">#FF2B2B</div>
+          <div class="swatch__token" style="margin-top: 4px;">Location identifier</div>
+        </div>
+        <div class="swatch" style="background: var(--bg); border-right: 1px solid var(--border);">
+          <div class="swatch__name">DC Pink</div>
+          <div class="swatch__token">--bg</div>
+          <div class="swatch__hex">#FFE0DB</div>
+          <div class="swatch__token" style="margin-top: 4px;">Page background — always</div>
+        </div>
+        <div class="swatch" style="background: var(--white); border-right: 1px solid var(--border);">
+          <div class="swatch__name">White</div>
+          <div class="swatch__token">--white</div>
+          <div class="swatch__hex">#FFFFFF</div>
+          <div class="swatch__token" style="margin-top: 4px;">Inverse text on dark only</div>
+        </div>
+        <div class="swatch" style="background: var(--surface);">
+          <div class="swatch__name">DC Surface</div>
+          <div class="swatch__token">--surface</div>
+          <div class="swatch__hex">#F5D0CB</div>
+          <div class="swatch__token" style="margin-top: 4px;">Hover states, elevated</div>
+        </div>
+      </div>
+
+      <!-- Diap split — from style guide examples p.14 -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-top: none; margin-top: 0;">
+
+        <!-- Pink side -->
+        <div style="padding: var(--sp-6) var(--sp-5); border-right: 1px solid var(--border);">
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--sp-5);">Localised — AMS pink background</div>
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(40px, 5vw, 72px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; color: var(--primary);">
+            Denim<br>City <span style="color: var(--accent);">AMS</span><br>
+            <span style="font-size: 0.65em;">Denim</span><br>
+            <span style="font-size: 0.65em;">Next</span>
+          </div>
+        </div>
+
+        <!-- Dark navy side -->
+        <div style="padding: var(--sp-6) var(--sp-5); background: var(--dark);">
+          <div style="font-family: var(--font-mono); font-size: var(--type-label); text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.35); margin-bottom: var(--sp-5);">Institutional — dark blue background</div>
+          <div style="font-family: var(--font-display); font-weight: 700; font-size: clamp(40px, 5vw, 72px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; color: var(--white);">
+            Denim<br>City <span style="color: var(--accent);">AMS</span><br>
+            <span style="font-size: 0.65em;">Denim</span><br>
+            <span style="font-size: 0.65em;">Next</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color rules -->
+      <div class="color-usage">
+        <div class="color-usage-row">
+          <div class="color-usage-row__label">Page background</div>
+          <div class="color-usage-row__text">Always DC Pink (#FFE0DB). Never white as page background.</div>
+        </div>
+        <div class="color-usage-row">
+          <div class="color-usage-row__label">AMS Red</div>
+          <div class="color-usage-row__text">Location identifier only. AMS in wordmark, active nav states, maximum one emphasis per content block.</div>
+        </div>
+        <div class="color-usage-row">
+          <div class="color-usage-row__label">Dark navy diap</div>
+          <div class="color-usage-row__text">Institutional contrast. White wordmark, AMS Red location. Text is always white — never blue on dark.</div>
+        </div>
+        <div class="color-usage-row">
+          <div class="color-usage-row__label">White</div>
+          <div class="color-usage-row__text">Inverse text on dark surfaces only. Never as page background or on pink.</div>
         </div>
       </div>
     </section>

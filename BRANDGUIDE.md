@@ -90,7 +90,8 @@ Headline treatment:
 
 Streamer treatment (editorial pull quotes):
 - Mix of Apercu Pro Bold Italic + Apercu Pro Regular Italic in the same line
-- The bold/italic switch mid-sentence is the voice — emphasis lands on specific words
+- Both always italic — only the weight switches (Bold Italic → Regular Italic)
+- The weight switch mid-sentence is the voice — emphasis lands on specific words
 - ALL CAPS
 - Example: *INSIDE AMSTERDAM'S DENIM* **INNOVATION HUB** *WHERE MATERIAL LITERACY REPLACES* **SUSTAINABILITY** *AS THE APPETITE*
 
